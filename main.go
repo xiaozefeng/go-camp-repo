@@ -17,5 +17,4 @@ package main
 // • 预习：sync 包和树的知识
 
 func main() {
-
 }

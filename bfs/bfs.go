@@ -30,3 +30,30 @@ func levelOrder(root *TreeNode) [][]int {
 	}
 	return res
 }
+
+func levelOrder2(root *TreeNode) [][]int {
+	var res = make([][]int, 0)
+	if root == nil {
+		return res
+	}
+	dfs(root, 0, &res)
+	return res
+}
+
+func dfs(node *TreeNode, level int, res *[][]int) {
+	// terminator
+	if node == nil {
+		return
+	}
+
+	// process
+	if level == len(res) {
+		*res = append(*res, make([]int, 0))
+	}
+
+	res[level] = append(res[level], node.Val)
+
+	// drill down
+	dfs(node.Left, level+1, res)
+	dfs(node.Right, level+1, res)
+}
