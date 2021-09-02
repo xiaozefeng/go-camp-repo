@@ -47,11 +47,12 @@ func dfs(node *TreeNode, level int, res *[][]int) {
 	}
 
 	// process
-	if level == len(res) {
+	if level == len(*res) {
 		*res = append(*res, make([]int, 0))
 	}
 
-	res[level] = append(res[level], node.Val)
+	// temp := *res
+	(*res)[level] = append((*res)[level], node.Val)
 
 	// drill down
 	dfs(node.Left, level+1, res)
