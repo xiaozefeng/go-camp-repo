@@ -1,13 +1,3 @@
-## 基于 errgroup 实现一个 http server 的启动和关闭 ，以及 linux signal 信号的注册和处理，要保证能够一个退出，全部注销退出。
-
-思路：
-1. 实现 http server 的启动和停止
-2. 处理 linux signal
-3. 使用errgroup 实现 注销所有 gogroutine
-
-
-
-```go
 package main
 
 import (
@@ -67,4 +57,3 @@ func main() {
 	}
 	log.Println("all group done!")
 }
-```
