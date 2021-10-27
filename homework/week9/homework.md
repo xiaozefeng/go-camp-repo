@@ -16,3 +16,6 @@
 
 
 ## 2. 实现一个从 socket connection 中解码出 goim 协议的解码器
+
+https://github.com/xiaozefeng/go-camp-repo/blob/main/homework/week9/goim/client.go
+
